@@ -1,56 +1,194 @@
-# Smart City Traffic Management System
+🚦 Smart City Traffic Management System
+A Graph-Based Approach to Smart Routing and Traffic Optimization
 
-## Project Overview
-The Smart City Traffic Management System models a city's road network as a weighted graph. It uses graph algorithms to find shortest routes, analyze traffic changes, check network connectivity, and plan cost-effective road infrastructure.
+A Python-based project that demonstrates how graph algorithms can be used to model city road networks, find efficient routes, analyze traffic conditions, and plan connected infrastructure.
 
-## Technologies Used
-- Python
-- Streamlit
-- NetworkX
-- Pandas
-- NumPy
-- Matplotlib
-- Jupyter Notebook
+The project provides an interactive Streamlit web application where users can manage intersections and roads, calculate shortest paths, simulate traffic congestion, analyze network connectivity, and compare algorithm performance.
 
-## Algorithms Implemented
-1. Dijkstra's Algorithm – Finds the shortest route.
-2. Bellman-Ford Algorithm – Analyzes route changes after traffic costs increase.
-3. BFS – Traverses the road network.
-4. DFS – Explores the road network.
-5. Prim's Algorithm – Finds a minimum spanning tree.
-6. Kruskal's Algorithm – Finds a minimum spanning tree.
-7. Performance Benchmarking – Compares execution time for different graph sizes.
+📌 Project Overview
 
-## Project Structure
-- `app.py` – Streamlit application.
-- `route_planner.py` – Shortest route planning.
-- `traffic_analysis.py` – Traffic analysis.
-- `benchmark.py` – Algorithm performance benchmarking.
-- `project_notebook.ipynb` – Algorithm demonstrations and analysis.
-- `requirements.txt` – Python dependencies.
-- `screenshots/` – Application screenshots.
+In a city, finding an efficient route between two locations can become difficult due to road networks, traffic congestion, and road closures.
 
-## Installation
-1. Clone or download this repository.
-2. Create and activate a Python virtual environment.
-3. Install dependencies:
+This project models a city's road network as a weighted graph, where:
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+Vertices (Nodes): Represent city intersections.
+Edges: Represent roads connecting intersections.
+Weights: Represent travel time or road cost.
 
-## Run the Application
+Different graph algorithms are implemented to solve routing, connectivity, and infrastructure planning problems.
 
-```bash
+🎯 Objectives
+Model a city road network using graph structures.
+Find the shortest and minimum-cost route between intersections.
+Simulate traffic congestion and road closures.
+Analyze network connectivity using BFS and DFS.
+Find minimum spanning trees using Prim's and Kruskal's algorithms.
+Compare the performance of different algorithms.
+Display results through an interactive web interface.
+✨ Key Features
+1. Road Network Management
+Add and manage city intersections.
+Add, update, and remove roads.
+View the road network graph.
+Display adjacency lists and adjacency matrices.
+2. Shortest Route Planning
+Calculate the shortest route between two intersections.
+Use Dijkstra's algorithm.
+Display the selected route and total travel cost.
+3. Traffic Management
+Simulate traffic congestion by increasing road costs.
+Simulate road closures.
+Compare routes before and after traffic changes.
+Display the updated route and travel cost.
+4. Network Connectivity
+Perform Breadth First Search (BFS).
+Perform Depth First Search (DFS).
+Identify reachable intersections.
+Analyze network connectivity.
+5. Infrastructure Planning
+Generate a Minimum Spanning Tree (MST).
+Implement Prim's algorithm.
+Implement Kruskal's algorithm.
+Compare infrastructure costs.
+6. Performance Analysis
+Compare multiple graph algorithms.
+Measure execution time.
+Analyze performance across different graph sizes.
+Display comparison charts.
+Export benchmark results as CSV.
+🧠 Algorithms Implemented
+Algorithm	Purpose	Time Complexity
+Dijkstra	Shortest route calculation	O((V + E) log V)
+Bellman-Ford	Shortest-path calculation and traffic analysis	O(V × E)
+BFS	Graph traversal and reachability	O(V + E)
+DFS	Graph traversal and connectivity	O(V + E)
+Prim's Algorithm	Minimum Spanning Tree	O(E log V)
+Kruskal's Algorithm	Minimum Spanning Tree	O(E log E)
+
+V = Number of vertices and E = Number of edges. Complexities depend on the implementation and underlying data structures.
+
+🛠️ Technologies Used
+Technology	Purpose
+Python	Core programming language
+Streamlit	Interactive web application
+NetworkX	Graph representation and operations
+Pandas	Data handling and analysis
+NumPy	Numerical operations
+Matplotlib	Graphs and visualizations
+Jupyter Notebook	Algorithm demonstrations and analysis
+Git & GitHub	Version control and project hosting
+📂 Project Structure
+Smart-City-Traffic-Management-System/
+│
+├── app.py
+├── benchmark.py
+├── connectivity_module.py
+├── mst_planner.py
+├── route_planner.py
+├── traffic_analysis.py
+│
+├── project_notebook.ipynb
+├── requirements.txt
+│
+├── Screenshots1/
+│   └── Screenshots/
+│       ├── 01_Dashboard_Full.png
+│       ├── 02_Road_Network_Full.png
+│       ├── 03_Shortest_Route_Dijkstra_Full.png
+│       ├── 04_Traffic_Road_Congestion_Full.png
+│       ├── 05_Traffic_Road_Closure_Full.png
+│       ├── 06_Network_Connectivity_BFS_Full.png
+│       ├── 07_Network_Connectivity_DFS_Full.png
+│       ├── 08_Prims_MST_FULL.png
+│       ├── 09_Kruskal_MST_Full.png
+│       ├── 10_Benchmark_Results_Full.png
+│       ├── 11_Execution_Time_Comparison_Full.png
+│       ├── 12_Algorithm_Comparison_Chart_Full.png
+│       └── 13_Adjacency_Matrix_Full.png
+│
+└── README.md
+⚙️ Installation and Setup
+Step 1: Clone the Repository
+git clone https://github.com/Harshitkumar0018/smart-city-traffic-system-Harshit-Kumar.git
+Step 2: Open the Project Folder
+cd smart-city-traffic-system-Harshit-Kumar
+Step 3: Create a Virtual Environment
+python -m venv venv
+Step 4: Activate the Virtual Environment
+
+Windows:
+
+venv\Scripts\activate
+
+Linux / macOS:
+
+source venv/bin/activate
+Step 5: Install Dependencies
+pip install -r requirements.txt
+Step 6: Run the Application
 streamlit run app.py
-```
 
-## Performance Analysis
-The project compares BFS, DFS, Dijkstra, Bellman-Ford, Prim, and Kruskal using graphs with 10, 25, 50, and 100 intersections.
+The application will open in your browser, usually at:
 
-Execution times can vary depending on the system and runtime conditions.
+http://localhost:8501
+📊 Performance Analysis
 
-## Author
-Harshit Kumar 
-2401201057
-BCA (AI & Data Science)-B 
+The project includes a benchmarking module to compare the execution performance of different graph algorithms.
+
+The performance analysis focuses on:
+
+Execution time comparison.
+Algorithm performance on different graph sizes.
+Comparison of graph traversal algorithms.
+Comparison of shortest-path algorithms.
+Visualization of benchmark results.
+
+Benchmark results can also be exported in CSV format for further analysis.
+
+📸 Application Screenshots
+
+The Screenshots1/Screenshots/ directory contains screenshots captured during application testing.
+
+These screenshots demonstrate:
+
+Main Dashboard
+Road Network Management
+Dijkstra Shortest Route
+Traffic Congestion Simulation
+Road Closure and Route Updating
+BFS Network Traversal
+DFS Network Traversal
+Prim's Minimum Spanning Tree
+Kruskal's Minimum Spanning Tree
+Benchmark Results
+Execution Time Comparison
+Algorithm Comparison Chart
+Adjacency Matrix
+🔮 Future Enhancements
+Integration with real-time traffic data.
+GPS-based route tracking.
+Live traffic congestion detection.
+Interactive geographical maps.
+Machine Learning-based traffic prediction.
+Dynamic route recommendations.
+🎓 Academic Information
+
+Project Title: Smart City Traffic Management System
+Course: Design and Analysis of Algorithms Lab (ENCA351)
+Program: BCA (Artificial Intelligence & Data Science)
+Semester: V
+University: K.R. Mangalam University
+
+👨‍💻 Author
+
+Harshit Kumar
+
+BCA (Artificial Intelligence & Data Science)
+K.R. Mangalam University
+
+📚 References
+Python Documentation
+Streamlit Documentation
+NetworkX Documentation
+Pandas Documentation
+Matplotlib Documentation
